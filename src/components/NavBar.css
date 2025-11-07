@@ -1,0 +1,12 @@
+.nav-bar{
+    display: flex;
+    margin: 30px;
+}
+
+.imgInMind {
+    margin-top: -40px;
+    width: 220px;
+    height: 160px;
+}
+
+.iconHome{}
