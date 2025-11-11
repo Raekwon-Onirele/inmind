@@ -1,4 +1,4 @@
-import imgInMind from "./files/InMind_page-0001.png";
+import imgInMind from "./files/InMind_page-0001.png"
 import styles from "./NavBar.css"
 
 const iconHome =

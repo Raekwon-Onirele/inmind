@@ -1,4 +1,3 @@
-import imgInMind from "./files/InMind_page-0001.png";
 import "./App.css";
 import NavBar from "./components/NavBar";
 
