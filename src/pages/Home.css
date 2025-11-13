@@ -1,13 +1,16 @@
 .nav-bar {
   display: flex;
-  margin: 30px 50px;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 9999;
+  height: 110px;
+  z-index: 1000;
+  background-color: white;
 }
 
 .imgInMind {
-  margin-top: -65px;
+  margin-top: -50px;
   margin-left: -10px;
   width: 400px;
   height: 210px;
@@ -15,7 +18,7 @@
 
 .menu {
   display: flex;
-  margin: 37px auto auto 40px;
+  margin: 50px auto auto 40px;
 }
 
 .textMenu {
@@ -31,16 +34,20 @@
   height: 25px;
 }
 
-.buttonEnter {
-  margin: 30px 150px 0px 0px;
+.buttonEnter{
+    margin: 45px 50px 0px 0px;
 }
 
-.textEnter {
-  background-color: #f4ca6a;
-  padding: 20px 35px;
-  border-radius: 20px;
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  text-decoration: none;
+.body {
+    padding-top: 90px;
 }
+
+.schedule {
+    background-color: #6AB0EC;
+    color: white;
+    height: 500px;
+    padding: 50px;
+}
+
+
+
