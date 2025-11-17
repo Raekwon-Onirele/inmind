@@ -1,18 +1,27 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import imgInMind from "../assets/InMind_page-0001.png";
+import imgInicioArrow from "../assets/logo-inicio-seta.png";
+import imgInicioHome from "../assets/logo-inicio-hamburguer.png";
+import imgQuemSomosArrow from "../assets/logo-quemsomos-arrow.png";
+import imgQuemSomosHome from "../assets/logo-quemsomos-home.png";
 import ButtonEnter from "../components/ButtonEnter";
 import styles from "./Home.css";
 
-const iconHome =
-  "https://img.icons8.com/?size=100&id=vSCcbxMrzsbl&format=png&color=000000";
-
 const Home = () => {
   {
-    /* Função para do Menu Início e Quem Somos */
+    /* Função para do Menu Início */
   }
-  const [active, setMode] = useState(false);
-  const ToggleMode = () => {
-    setMode(!active);
+  const [isOpenInicio, setIsOpenInicio] = useState(false);
+  const ToggleMenuInicio = () => {
+    setIsOpenInicio(!isOpenInicio);
+  };
+
+  {
+    /* Função para do Menu Quem Somos */
+  }
+  const [isOpenQuemSomos, setIsOpenQuemSomos] = useState(false);
+  const ToggleMenuQuemSomos = () => {
+    setIsOpenQuemSomos(!isOpenQuemSomos);
   };
 
   return (
@@ -24,14 +33,23 @@ const Home = () => {
 
         {/* Barra menu Início e Quem Somos */}
         <div className="menu">
-          <div className="menuButton" onClick={ToggleMode}>
-            {active ? "Fechar X" : "Menu"}
-            <a href="a" className="textMenu">
-              Início
-            </a>
-            <img src={iconHome} alt="logo saduiche" className="iconHome" />
+          {/* Menu Início */}
+          <div className="menuButtonInicio" onClick={ToggleMenuInicio}>
+            {isOpenInicio ? (
+              <img
+                src={imgInicioArrow}
+                alt="logo inicio seta"
+                className="imgInicioArrow"
+              />
+            ) : (
+              <img
+                src={imgInicioHome}
+                alt="logo inicio home"
+                className="imgInicioHome"
+              />
+            )}
           </div>
-          <div className={"menu-dropdown ${active"}>aaaa
+          <div className={`menu-dropdown-inicio ${isOpenInicio ? "open" : ""}`}>
             <ul>
               <li>
                 <a href="a">Agende Sua Consulta</a>
@@ -42,10 +60,37 @@ const Home = () => {
             </ul>
           </div>
 
-          <a href="" className="textMenu">
-            Quem Somos
-          </a>
-          <img src={iconHome} alt="logo saduiche" className="iconHome" />
+          {/* Menu Quem Somos */}
+
+          <div className="menuButtonQuemSomos" onClick={ToggleMenuQuemSomos}>
+            {isOpenQuemSomos ? (
+              <img
+                src={imgQuemSomosArrow}
+                alt="logo inicio seta"
+                className="imgInicioArrow"
+              />
+            ) : (
+              <img
+                src={imgQuemSomosHome}
+                alt="logo inicio home"
+                className="imgInicioHome"
+              />
+            )}
+          </div>
+          <div
+            className={`menu-dropdown-quem-somos ${
+              isOpenQuemSomos ? "open" : ""
+            }`}
+          >
+            <ul>
+              <li>
+                <a href="a">Quem Somos</a>
+              </li>
+              <li>
+                <a href="a">Missão, Valores, Abordagem</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <ButtonEnter className="buttonEnter" />
       </nav>

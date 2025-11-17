@@ -16,18 +16,93 @@
   height: 210px;
 }
 
-.menuButton {
-  background-color: purple;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-}
-
 .menu {
   display: flex;
-  margin: 50px auto auto 40px;
+  margin: 10px auto auto 0px;
 }
+
+.menuButtonInicio {
+  display: flex;
+  cursor: pointer;
+  z-index: 10;
+  font-size: x-large;
+}
+
+.menu-dropdown-inicio {
+  position: absolute;
+  width: 300px;
+  margin: 80px 0px 0px 50px;
+  background-color: #f4cb6ab7;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.menu-dropdown-inicio.open{
+  max-height: 100px;
+}
+
+.menu-dropdown-inicio ul {
+  list-style: none;
+  padding: 0;
+  margin: 0px;
+}
+
+.menu-dropdown-inicio li a{
+  display: flex;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  
+}
+
+.menu-dropdown-inicio li a:hover {
+  background-color: #f4cb6acb;
+}
+
+.menuButtonQuemSomos {
+  display: flex;
+  cursor: pointer;
+  z-index: 10;
+  font-size: x-large;
+}
+
+.menu-dropdown-quem-somos {
+  position: absolute;
+  width: 300px;
+  margin: 80px 0px 0px 230px;
+  background-color: #f4cb6ab7;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.menu-dropdown-quem-somos.open{
+  max-height: 100px;
+}
+
+.menu-dropdown-quem-somos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0px;
+}
+
+.menu-dropdown-quem-somos li a{
+  display: flex;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  
+}
+
+.menu-dropdown-quem-somos li a:hover {
+  background-color: #f4cb6acb;
+}
+
 
 .textMenu {
   text-decoration: none;
@@ -36,10 +111,14 @@
   font-weight: 500;
 }
 
-.iconHome {
-  padding: 0px 50px 0px 13px;
-  width: 25px;
-  height: 25px;
+.imgInicioHome {
+  width: 220px;
+  height: 120px;
+}
+
+.imgInicioArrow {
+  width: 220px;
+  height: 120px;
 }
 
 .buttonEnter{
