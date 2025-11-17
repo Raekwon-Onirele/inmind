@@ -16,6 +16,14 @@
   height: 210px;
 }
 
+.menuButton {
+  background-color: purple;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
 .menu {
   display: flex;
   margin: 50px auto auto 40px;
