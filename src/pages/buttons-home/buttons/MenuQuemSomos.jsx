@@ -1,16 +1,19 @@
-const MenuQuemSomos = () => {
+import styles from "./MenuQuemSomos.css"
+import imgQuemSomosArrow from "../../../assets/logo-quemsomos-arrow.png";
+import imgQuemSomosHome from "../../../assets/logo-quemsomos-home.png";
+
+const MenuQuemSomos = ({ menuId, isOpen, onToggle}) => {
   {
     /* Função para do Menu Quem Somos */
   }
-  const [isOpenQuemSomos, setIsOpenQuemSomos] = useState(false);
-  const ToggleMenuQuemSomos = () => {
-    setIsOpenQuemSomos(!isOpenQuemSomos);
+  const handleClick = () => {
+    onToggle(menuId);
   };
 
   return (
     <div>
-      <div className="menuButtonQuemSomos" onClick={ToggleMenuQuemSomos}>
-        {isOpenQuemSomos ? (
+      <div className="menuButtonQuemSomos" onClick={handleClick}>
+        {isOpen ? (
           <img
             src={imgQuemSomosArrow}
             alt="logo inicio seta"
@@ -24,7 +27,7 @@ const MenuQuemSomos = () => {
           />
         )}
       </div>
-      <div className={`menu-dropdown-quem-somos ${isOpenQuemSomos ? "open" : ""}`}>
+      <div className={`menu-dropdown-quem-somos ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
             <a href="a">Quem Somos</a>

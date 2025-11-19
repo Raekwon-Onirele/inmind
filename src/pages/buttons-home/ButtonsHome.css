@@ -1,0 +1,10 @@
+.buttonsMenu {
+    display: flex;
+    margin: 15px 0px 0px -220px;
+}
+
+.imgInicioArrow, .imgInicioHome {
+    width: 180px;
+    height: 100px;
+    margin-left: -25px;
+}

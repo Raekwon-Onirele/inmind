@@ -1,17 +1,21 @@
-const MenuInicio = () => {
+import React from 'react'
+import imgInicioArrow from '../../../assets/logo-inicio-seta.png'
+import imgInicioHome from '../../../assets/logo-inicio-hamburguer.png'
+import styles from "./MenuInicio.css";
+
+const MenuInicio = ({ menuId, isOpen, onToggle}) => {
   {
     /* Função para do Menu Início */
   }
-  const [isOpenInicio, setIsOpenInicio] = useState(false);
-  const ToggleMenuInicio = () => {
-    setIsOpenInicio(!isOpenInicio);
+  const handleClick = () => {
+    onToggle(menuId);
   };
 
   return (
     <div>
       {/* Menu Início */}
-      <div className="menuButtonInicio" onClick={ToggleMenuInicio}>
-        {isOpenInicio ? (
+      <div className="menuButtonInicio" onClick={handleClick}>
+        {isOpen ? (
           <img
             src={imgInicioArrow}
             alt="logo inicio seta"
@@ -25,7 +29,7 @@ const MenuInicio = () => {
           />
         )}
       </div>
-      <div className={`menu-dropdown-inicio ${isOpenInicio ? "open" : ""}`}>
+      <div className={`menu-dropdown-inicio ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
             <a href="a">Agende Sua Consulta</a>
