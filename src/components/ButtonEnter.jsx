@@ -1,6 +1,4 @@
-import styles from "./ButtonEnter.css";
-
-import React from 'react'
+import "./ButtonEnter.css";
 
 const ButtonEnter = () => {
   return (

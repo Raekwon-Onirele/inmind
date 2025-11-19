@@ -1,0 +1,10 @@
+.buttonWhatsapp{
+    background-color: #EF5361;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    width: 220px;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 20px;
+}

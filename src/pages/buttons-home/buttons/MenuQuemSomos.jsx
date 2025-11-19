@@ -1,11 +1,10 @@
-import styles from "./MenuQuemSomos.css"
+import "./MenuQuemSomos.css";
 import imgQuemSomosArrow from "../../../assets/logo-quemsomos-arrow.png";
 import imgQuemSomosHome from "../../../assets/logo-quemsomos-home.png";
 
-const MenuQuemSomos = ({ menuId, isOpen, onToggle}) => {
-  {
-    /* Função para do Menu Quem Somos */
-  }
+const MenuQuemSomos = ({ menuId, isOpen, onToggle }) => {
+  /* Função para do Menu Quem Somos */
+
   const handleClick = () => {
     onToggle(menuId);
   };

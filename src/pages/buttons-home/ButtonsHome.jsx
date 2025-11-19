@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ButtonInicio from "./buttons/MenuInicio";
 import ButtonQuemSomos from "./buttons/MenuQuemSomos";
-import styles from "./ButtonsHome.css"
+import "./ButtonsHome.css"
 
 const ButtonInicioA = "Button-Inicio";
 const ButtonQuemSomosB = "Button-QuemSomos";

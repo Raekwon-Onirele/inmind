@@ -1,12 +1,10 @@
-import React from 'react'
 import imgInicioArrow from '../../../assets/logo-inicio-seta.png'
 import imgInicioHome from '../../../assets/logo-inicio-hamburguer.png'
-import styles from "./MenuInicio.css";
+import "./MenuInicio.css";
 
 const MenuInicio = ({ menuId, isOpen, onToggle}) => {
-  {
-    /* Função para do Menu Início */
-  }
+  /* Função para do Menu Início */
+  
   const handleClick = () => {
     onToggle(menuId);
   };

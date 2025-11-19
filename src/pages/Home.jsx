@@ -1,8 +1,10 @@
-import React, { useState } from "react";
 import imgInMind from "../assets/InMind_page-0001.png";
+import imgSchedule from "../assets/2506262-perfil-com-quebra-cabeca-gratis-vetor.png";
 import ButtonsHome from "./buttons-home/ButtonsHome";
 import ButtonEnter from "../components/ButtonEnter";
-import styles from "./Home.css";
+import ButtonAgendeWhatsapp from "../components/ButtonAgendeWhatsapp";
+import ButtonAgendeAqui from "../components/ButtonAgendeAqui"
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -20,8 +22,14 @@ const Home = () => {
 
       <div className="body">
         <div className="schedule">
-          <h1>Agende</h1>
+          <h1>Agende Sua Consulta</h1>
+
+          <div>
+            <ButtonAgendeAqui />
+            <ButtonAgendeWhatsapp />
+          </div>
         </div>
+        <img src={imgSchedule} alt="Quebra-Cabeça" className="imgSchedule" />
       </div>
     </div>
   );

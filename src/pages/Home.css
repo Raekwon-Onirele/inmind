@@ -17,20 +17,37 @@
   height: 210px;
 }
 
-.buttonEnter{
-    margin: 45px -80px 0px 0px;
+.buttonEnter {
+  margin: 45px -80px 0px 0px;
 }
 
 .body {
-    padding-top: 90px;
+  padding-top: 90px;
 }
 
 .schedule {
-    background-color: #6AB0EC;
-    color: white;
-    height: 500px;
-    padding: 50px;
+  display: block;
+  justify-items: left;
+  background-color: #6ab0ec;
+  color: white;
+  height: 420px;
+  padding: 70px;
 }
 
+.schedule h1 {
+  font-size: 90px;
+  width: 530px;
+  text-align: left;
+}
 
+.schedule div {
+  display:flex;
+  padding-right: 40px;
+}
 
+.imgSchedule {
+  width: 640px;
+  height: 620px;
+  margin: -540px 0px 0px 660px;
+  transform: rotate(350deg);
+}
