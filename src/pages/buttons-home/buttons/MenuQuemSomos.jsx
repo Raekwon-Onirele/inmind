@@ -3,22 +3,24 @@ import imgQuemSomosArrow from "../../../assets/logo-quemsomos-arrow.png";
 import imgQuemSomosHome from "../../../assets/logo-quemsomos-home.png";
 
 const MenuQuemSomos = ({ menuId, isOpen, onToggle }) => {
-  /* Função para do Menu Quem Somos */
-
+  /* Função para quando clicar chamar a função do elemento pai */
   const handleClick = () => {
     onToggle(menuId);
   };
 
   return (
     <div>
+      {/* < Função para quando clicar no botão mudar para outra img */}
       <div className="menuButtonQuemSomos" onClick={handleClick}>
         {isOpen ? (
+          /* img que vai aparecer após o clique */
           <img
             src={imgQuemSomosArrow}
             alt="logo inicio seta"
             className="imgInicioArrow"
           />
         ) : (
+          /* img que vai aparecer antes do clique */
           <img
             src={imgQuemSomosHome}
             alt="logo inicio home"
@@ -26,6 +28,9 @@ const MenuQuemSomos = ({ menuId, isOpen, onToggle }) => {
           />
         )}
       </div>
+      {/* </ Função para quando clicar no botão mudar para outra img */}
+
+      {/* O que vai aparecer no menu após o clique */}
       <div className={`menu-dropdown-quem-somos ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
