@@ -76,12 +76,30 @@
   margin-top: 150px;
 }
 
-.mission {
-  display: block;
-  width: 200px;
-  height: 230px;
+.cards .cardsLower {
+  display: flex;
+  width: 270px;
+  height: 360px;
   padding: 20px;
   background-color: #EF5361;
   color: white;
   border-radius: 30px;
+}
+
+.cards .cardsSuperior {
+  margin: 10px auto;
+  padding: 0px 10px 10px 10px;
+  border-radius: 30px;
+  background-color: #F4CA6A;
+}
+
+.cards .cardsLower .cardsSuperior .cardTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.cards .cardsLower .cardsSuperior p {
+  text-align: center;
+  font-size: 20px;
+  max-width: 220px;
 }

@@ -40,20 +40,47 @@ const Home = () => {
         {/* Parte do Quem Somos */}
         <div className="whoWeAre">
           <h2>Quem Somos</h2>
-          <p className="textWhoWeAre">Seja bem-vindo(a) à nossa clínica de psicologia. Somos um espaço dedicado ao cuidado integral da sua saúde mental e bem-estar emocional. Entendemos que a jornada da vida é repleta de desafios e transformações, e ter um suporte profissional e acolhedor faz toda a diferença.</p>
+          <p className="textWhoWeAre">
+            Seja bem-vindo(a) à nossa clínica de psicologia. Somos um espaço
+            dedicado ao cuidado integral da sua saúde mental e bem-estar
+            emocional. Entendemos que a jornada da vida é repleta de desafios e
+            transformações, e ter um suporte profissional e acolhedor faz toda a
+            diferença.
+          </p>
 
           <div className="cards">
-            <div className="mission">
-              <p>Missão</p>
-              <p>Promover o autoconhecimento, o desenvolvimento pessoal e a qualidade de vida dos pacientes, oferecendo suporte profissional para superar obstáculos e construir uma vida plena.</p>
+            <div className="cardsLower">
+              <div className="cardsSuperior">
+                <p className="cardTitle">Missão</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                  quae ut ratione eos qui odio, facere, consectetur cupiditate
+                  vitae est at porro fugiat, magni id unde tempora? Expedita,
+                  natus aliquid.
+                </p>
+              </div>
             </div>
-            <div className="mission">
-              <p>Missão</p>
-              <p>Promover o autoconhecimento, o desenvolvimento pessoal e a qualidade de vida dos pacientes, oferecendo suporte profissional para superar obstáculos e construir uma vida plena.</p>
+            <div className="cardsLower">
+              <div className="cardsSuperior">
+                <p className="cardTitle">Valores</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                  quae ut ratione eos qui odio, facere, consectetur cupiditate
+                  vitae est at porro fugiat, magni id unde tempora? Expedita,
+                  natus aliquid.
+                </p>
+              </div>
             </div>
-            <div className="mission">
-              <p>Missão</p>
-              <p>Promover o autoconhecimento, o desenvolvimento pessoal e a qualidade de vida dos pacientes, oferecendo suporte profissional para superar obstáculos e construir uma vida plena.</p>
+            <div className="cardsLower">
+              <div className="cardsSuperior">
+                <p className="cardTitle">Abordagem</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                  quae ut ratione eos qui odio, facere, consectetur cupiditate
+                  vitae est at porro fugiat, magni id unde tempora? Expedita,
+                  natus aliquid.
+                </p>
+              </div>
             </div>
           </div>
         </div>
