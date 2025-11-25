@@ -1,5 +1,6 @@
 import imgInMind from "../assets/InMind_page-0001.png";
 import imgSchedule from "../assets/2506262-perfil-com-quebra-cabeca-gratis-vetor.png";
+import imgQrCode from "../assets/Captura de tela 2025-11-25 102602.png"
 import ButtonsHome from "./buttons-home/ButtonsHome";
 import ButtonEnter from "../components/ButtonEnter";
 import ButtonAgendeWhatsapp from "../components/ButtonAgendeWhatsapp";
@@ -12,7 +13,7 @@ const Home = () => {
       {/* < Nav-Bar da página */}
       <nav className="nav-bar">
         {/* Logo da marca no Nav-bar */}
-        <img src={imgInMind} alt="Foto da logo" className="imgInMind" />
+        <img src={imgInMind} alt="Foto da logo" className="imgInMind" href="a"/>
 
         {/* Botões Quem Somos e Início */}
         <ButtonsHome />
@@ -38,7 +39,7 @@ const Home = () => {
         {/* </ Parte do Agende Sua Consula */}
 
         {/* Parte do Quem Somos */}
-        <div className="whoWeAre">
+        <div className="whoWeAre" id="whoWeAre">
           <h2>Quem Somos</h2>
           <p className="textWhoWeAre">
             Seja bem-vindo(a) à nossa clínica de psicologia. Somos um espaço
@@ -48,7 +49,9 @@ const Home = () => {
             diferença.
           </p>
 
+          {/* Cards missão, valores e abordagem */}
           <div className="cards">
+            {/* Card Missão */}
             <div className="cardsLower">
               <div className="cardsSuperior">
                 <p className="cardTitle">Missão</p>
@@ -60,6 +63,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
+            {/* Card Valores */}
             <div className="cardsLower">
               <div className="cardsSuperior">
                 <p className="cardTitle">Valores</p>
@@ -71,6 +75,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
+            {/* Card Abordagem */}
             <div className="cardsLower">
               <div className="cardsSuperior">
                 <p className="cardTitle">Abordagem</p>
@@ -84,6 +89,21 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <footer>
+          <img src={imgInMind} alt="imgFoot" className="imgInMindFoot" />
+
+          <div className="contats">
+            <p>Telefone para Contato: (11) 11111-1111</p>
+            <p>Email para Contato: contato.raekwon@gmail.com</p>
+          </div>
+
+          <div className="github">
+            <a href="https://github.com/Raekwon-Onirele">Github: https://github.com/Raekwon-Onirele</a>
+          </div>
+
+          <img src={imgQrCode} alt="QrCode" className="imgQrCode"/>
+        </footer>
       </div>
     </div>
   );

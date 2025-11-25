@@ -34,7 +34,7 @@ const MenuQuemSomos = ({ menuId, isOpen, onToggle }) => {
       <div className={`menu-dropdown-quem-somos ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="a">Quem Somos</a>
+            <a href="#whoWeAre" className="quemSomos">Quem Somos</a>
           </li>
           <li>
             <a href="a">Missão, Valores, Abordagem</a>

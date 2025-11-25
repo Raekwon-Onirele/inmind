@@ -41,7 +41,7 @@
 }
 
 .schedule div {
-  display:flex;
+  display: flex;
   padding-right: 40px;
 }
 
@@ -58,7 +58,7 @@
 
 .whoWeAre h2 {
   text-align: left;
-  color:#6ab0ec;
+  color: #6ab0ec;
   font-size: 48px;
   font-weight: bold;
   margin-top: -90px;
@@ -81,7 +81,7 @@
   width: 270px;
   height: 360px;
   padding: 20px;
-  background-color: #EF5361;
+  background-color: #ef5361;
   color: white;
   border-radius: 30px;
 }
@@ -90,7 +90,7 @@
   margin: 10px auto;
   padding: 0px 10px 10px 10px;
   border-radius: 30px;
-  background-color: #F4CA6A;
+  background-color: #f4ca6a;
 }
 
 .cards .cardsLower .cardsSuperior .cardTitle {
@@ -102,4 +102,47 @@
   text-align: center;
   font-size: 20px;
   max-width: 220px;
+}
+
+footer {
+  display: flex;
+  max-width: 100%;
+  max-height: 180px;
+  margin-top: 200px;
+  padding: 20px;
+  background-color: #016fce;
+}
+
+footer .imgInMindFoot {
+  margin: -30px 0px 0px -20px;
+  width: 440px;
+  height: 250px;
+}
+
+footer .contats {
+  color: white;
+  margin: auto 0px auto 20px;
+  max-width: 190px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+footer .github {
+  margin: auto 0px auto 60px;
+  width: 290px;
+  text-align: left;
+}
+
+footer .github a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+footer .imgQrCode {
+  margin: auto;
+  width: 160px;
+  height: 160px;
 }
