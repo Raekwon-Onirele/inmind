@@ -1,6 +1,7 @@
+import React, { useRef } from "react";
 import imgInMind from "../assets/InMind_page-0001.png";
 import imgSchedule from "../assets/2506262-perfil-com-quebra-cabeca-gratis-vetor.png";
-import imgQrCode from "../assets/Captura de tela 2025-11-25 102602.png"
+import imgQrCode from "../assets/Captura de tela 2025-11-25 102602.png";
 import ButtonsHome from "./buttons-home/ButtonsHome";
 import ButtonEnter from "../components/ButtonEnter";
 import ButtonAgendeWhatsapp from "../components/ButtonAgendeWhatsapp";
@@ -8,15 +9,35 @@ import ButtonAgendeAqui from "../components/ButtonAgendeAqui";
 import "./Home.css";
 
 const Home = () => {
+  //Função Scroll
+  const secaoQuemSomos = useRef(null);
+
+  const scrollDirection = () => {
+    if (secaoQuemSomos.current) {
+      secaoQuemSomos.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      console.log("scroll")
+    }
+  };
+
   return (
     <div>
       {/* < Nav-Bar da página */}
       <nav className="nav-bar">
         {/* Logo da marca no Nav-bar */}
-        <img src={imgInMind} alt="Foto da logo" className="imgInMind" href="a"/>
+        <img
+          src={imgInMind}
+          alt="Foto da logo"
+          className="imgInMind"
+          href="a"
+        />
 
         {/* Botões Quem Somos e Início */}
-        <ButtonsHome />
+        <ButtonsHome 
+          scrollDestination = {scrollDirection}
+        />
 
         {/* Botão Enter */}
         <ButtonEnter className="buttonEnter" />
@@ -39,7 +60,7 @@ const Home = () => {
         {/* </ Parte do Agende Sua Consula */}
 
         {/* Parte do Quem Somos */}
-        <div className="whoWeAre" id="whoWeAre">
+        <div className="whoWeAre" ref={secaoQuemSomos}>
           <h2>Quem Somos</h2>
           <p className="textWhoWeAre">
             Seja bem-vindo(a) à nossa clínica de psicologia. Somos um espaço
@@ -99,10 +120,12 @@ const Home = () => {
           </div>
 
           <div className="github">
-            <a href="https://github.com/Raekwon-Onirele">Github: https://github.com/Raekwon-Onirele</a>
+            <a href="https://github.com/Raekwon-Onirele">
+              Github: https://github.com/Raekwon-Onirele
+            </a>
           </div>
 
-          <img src={imgQrCode} alt="QrCode" className="imgQrCode"/>
+          <img src={imgQrCode} alt="QrCode" className="imgQrCode" />
         </footer>
       </div>
     </div>
