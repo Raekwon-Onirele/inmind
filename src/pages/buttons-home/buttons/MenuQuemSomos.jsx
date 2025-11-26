@@ -8,6 +8,7 @@ const MenuQuemSomos = ({ menuId, isOpen, onToggle, scrollPage }) => {
     onToggle(menuId);
   };
 
+
   return (
     <div>
       {/* < Função para quando clicar no botão mudar para outra img */}
@@ -33,8 +34,8 @@ const MenuQuemSomos = ({ menuId, isOpen, onToggle, scrollPage }) => {
       {/* O que vai aparecer no menu após o clique */}
       <div className={`menu-dropdown-quem-somos ${isOpen ? "open" : ""}`}>
         <ul>
-          <li onClick={scrollPage}>
-            <a href="a" className="quemSomos" >Quem Somos</a>
+          <li >
+            <p className="quemSomos" onClick={scrollPage}>Quem Somos</p>
           </li>
           <li>
             <a href="a">Missão, Valores, Abordagem</a>

@@ -22,12 +22,12 @@ const ButtonsHome = (scrollDestination) => {
         menuId = {ButtonInicioA}
         isOpen = {menuAberto === ButtonInicioA}
         onToggle = {toggleMenu}
-        scrollPage = { scrollDestination }
       />
       <ButtonQuemSomos 
         menuId = {ButtonQuemSomosB}
         isOpen = {menuAberto === ButtonQuemSomosB}
         onToggle = {toggleMenu}
+        scrollPage = { scrollDestination }
       />
     </div>
   )

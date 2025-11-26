@@ -12,11 +12,11 @@ const Home = () => {
   //Função Scroll
   const secaoQuemSomos = useRef(null);
 
-  const scrollDirection = () => {
+  const scrollDestinationa = () => {
     if (secaoQuemSomos.current) {
       secaoQuemSomos.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+        behavior: 'smooth',
+        block: 'start',
       });
       console.log("scroll")
     }
@@ -36,7 +36,7 @@ const Home = () => {
 
         {/* Botões Quem Somos e Início */}
         <ButtonsHome 
-          scrollDestination = {scrollDirection}
+          scrollDestination = {scrollDestinationa}
         />
 
         {/* Botão Enter */}
