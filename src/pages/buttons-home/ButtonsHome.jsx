@@ -9,7 +9,7 @@ const ButtonQuemSomosB = "Button-QuemSomos";
 const Nenhum = null;
 
 // Função para quando um menu estiver aberto o outro fechar
-const ButtonsHome = (scrollDestination) => {
+const ButtonsHome = ({scrollDestinationQuemSomos, scrollDestinationMissao, scrollDestinationAgende}) => {
   const [menuAberto, setMenuAberto] = useState(Nenhum);
   const toggleMenu = (menuId) => {
     setMenuAberto(menuAberto === menuId ? Nenhum : menuId);
@@ -22,12 +22,14 @@ const ButtonsHome = (scrollDestination) => {
         menuId = {ButtonInicioA}
         isOpen = {menuAberto === ButtonInicioA}
         onToggle = {toggleMenu}
+        scrollPageAgende = {scrollDestinationAgende}
       />
       <ButtonQuemSomos 
         menuId = {ButtonQuemSomosB}
         isOpen = {menuAberto === ButtonQuemSomosB}
         onToggle = {toggleMenu}
-        scrollPage = { scrollDestination }
+        scrollPageQuemSomos = { scrollDestinationQuemSomos }
+        scrollPageMissao = {scrollDestinationMissao}
       />
     </div>
   )

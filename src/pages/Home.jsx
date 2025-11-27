@@ -11,14 +11,33 @@ import "./Home.css";
 const Home = () => {
   //Função Scroll
   const secaoQuemSomos = useRef(null);
+  const secaoMissao = useRef(null);
+  const secaoAgende = useRef(null);
 
-  const scrollDestinationa = () => {
+  const scrollDestinationQuemSomos = () => {
     if (secaoQuemSomos.current) {
       secaoQuemSomos.current.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
-      console.log("scroll")
+    }
+  };
+
+  const scrollDestinationMissao = () => {
+    if (secaoMissao.current) {
+      secaoMissao.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const scrollDestinationAgende = () => {
+    if (secaoAgende.current) {
+      secaoAgende.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     }
   };
 
@@ -36,7 +55,9 @@ const Home = () => {
 
         {/* Botões Quem Somos e Início */}
         <ButtonsHome 
-          scrollDestination = {scrollDestinationa}
+          scrollDestinationQuemSomos = {scrollDestinationQuemSomos}
+          scrollDestinationMissao = {scrollDestinationMissao}
+          scrollDestinationAgende = {scrollDestinationAgende}
         />
 
         {/* Botão Enter */}
@@ -44,13 +65,13 @@ const Home = () => {
       </nav>
       {/* </ Nav-Bar da página */}
 
-      <div className="body">
+      <div className="body" ref={secaoAgende}>
         {/* < Parte do Agende Sua Consula */}
         <div className="schedule">
           <h1>Agende Sua Consulta</h1>
 
           {/* Botões Agende Aqui e Agende pelo Whatsapp */}
-          <div>
+          <div ref={secaoQuemSomos}>
             <ButtonAgendeAqui />
             <ButtonAgendeWhatsapp />
           </div>
@@ -60,18 +81,21 @@ const Home = () => {
         {/* </ Parte do Agende Sua Consula */}
 
         {/* Parte do Quem Somos */}
-        <div className="whoWeAre" ref={secaoQuemSomos}>
-          <h2>Quem Somos</h2>
-          <p className="textWhoWeAre">
+        
+        <div className="whoWeAre" >
+          <h2 >Quem Somos</h2>
+          <p className="textWhoWeAre" >
             Seja bem-vindo(a) à nossa clínica de psicologia. Somos um espaço
             dedicado ao cuidado integral da sua saúde mental e bem-estar
             emocional. Entendemos que a jornada da vida é repleta de desafios e
             transformações, e ter um suporte profissional e acolhedor faz toda a
-            diferença.
+            diferença. 
           </p>
 
+          <p ref={secaoMissao}></p>
+          
           {/* Cards missão, valores e abordagem */}
-          <div className="cards">
+          <div className="cards" >
             {/* Card Missão */}
             <div className="cardsLower">
               <div className="cardsSuperior">

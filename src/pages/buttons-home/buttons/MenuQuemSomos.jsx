@@ -2,12 +2,11 @@ import "./MenuQuemSomos.css";
 import imgQuemSomosArrow from "../../../assets/logo-quemsomos-arrow.png";
 import imgQuemSomosHome from "../../../assets/logo-quemsomos-home.png";
 
-const MenuQuemSomos = ({ menuId, isOpen, onToggle, scrollPage }) => {
+const MenuQuemSomos = ({ menuId, isOpen, onToggle, scrollPageQuemSomos, scrollPageMissao }) => {
   /* Função para quando clicar chamar a função do elemento pai */
   const handleClick = () => {
     onToggle(menuId);
   };
-
 
   return (
     <div>
@@ -35,10 +34,10 @@ const MenuQuemSomos = ({ menuId, isOpen, onToggle, scrollPage }) => {
       <div className={`menu-dropdown-quem-somos ${isOpen ? "open" : ""}`}>
         <ul>
           <li >
-            <p className="quemSomos" onClick={scrollPage}>Quem Somos</p>
+            <p className="quemSomos" onClick={scrollPageQuemSomos}>Quem Somos</p>
           </li>
           <li>
-            <a href="a">Missão, Valores, Abordagem</a>
+            <p onClick={scrollPageMissao}>Missão, Valores, Abordagem</p>
           </li>
         </ul>
       </div>

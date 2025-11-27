@@ -2,7 +2,7 @@ import imgInicioArrow from "../../../assets/logo-inicio-seta.png";
 import imgInicioHome from "../../../assets/logo-inicio-hamburguer.png";
 import "./MenuInicio.css";
 
-const MenuInicio = ({ menuId, isOpen, onToggle }) => {
+const MenuInicio = ({ menuId, isOpen, onToggle, scrollPageAgende }) => {
   /* Função para quando clicar chamar a função do elemento pai */
   const handleClick = () => {
     onToggle(menuId);
@@ -34,10 +34,10 @@ const MenuInicio = ({ menuId, isOpen, onToggle }) => {
       <div className={`menu-dropdown-inicio ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="a">Agende Sua Consulta</a>
+            <p onClick={scrollPageAgende}>Agende Sua Consulta</p>
           </li>
           <li>
-            <a href="a">Nosso Whatsapp</a>
+            <p onClick={scrollPageAgende}>Nosso Whatsapp</p>
           </li>
         </ul>
       </div>

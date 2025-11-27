@@ -26,14 +26,14 @@
   margin: 0px;
 }
 
-.menu-dropdown-quem-somos li a{
+.menu-dropdown-quem-somos li p{
   display: flex;
-  padding: 10px 10px;
-  text-decoration: none;
+  padding: 10px;
   color: white;
   font-size: large;
+  margin: 0px;
 }
 
-.menu-dropdown-quem-somos li a:hover {
+.menu-dropdown-quem-somos li p:hover {
   background-color: #f8c95c ;
 }

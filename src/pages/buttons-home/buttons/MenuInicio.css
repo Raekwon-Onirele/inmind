@@ -26,15 +26,14 @@
   margin: 0px;
 }
 
-.menu-dropdown-inicio li a{
+.menu-dropdown-inicio li p{
   display: flex;
-  padding: 10px 10px;
-  text-decoration: none;
+  padding: 10px;
   color: white;
   font-size: large;
-  
+  margin: 0px;
 }
 
-.menu-dropdown-inicio li a:hover {
+.menu-dropdown-inicio li p:hover {
   background-color: #f8c95c;
 }
