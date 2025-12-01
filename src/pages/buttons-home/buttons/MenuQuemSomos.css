@@ -16,7 +16,7 @@
   transition: max-height 0.3s ease-in-out;
 }
 
-.menu-dropdown-quem-somos.open{
+.menu-dropdown-quem-somos.open {
   max-height: 100px;
 }
 
@@ -26,14 +26,15 @@
   margin: 0px;
 }
 
-.menu-dropdown-quem-somos li p{
+.menu-dropdown-quem-somos li p {
   display: flex;
   padding: 10px;
   color: white;
+  cursor: pointer;
   font-size: large;
   margin: 0px;
 }
 
 .menu-dropdown-quem-somos li p:hover {
-  background-color: #f8c95c ;
+  background-color: #f8c95c;
 }

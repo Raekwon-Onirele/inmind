@@ -3,7 +3,7 @@ import "./ButtonAgendeWhatsapp.css"
 const ButtonAgendeWhatsapp = () => {
   return (
     <div>
-        <a href="a" className="buttonWhatsapp">Agende Pelo Whatsapp: (11) 9400-0000</a>
+        <p href="a" className="buttonWhatsapp">Agende Pelo Whatsapp: (11) 9400-0000</p>
     </div>
   )
 }

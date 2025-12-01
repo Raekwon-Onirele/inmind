@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import imgInMind from "../assets/InMind_page-0001.png";
 import imgSchedule from "../assets/2506262-perfil-com-quebra-cabeca-gratis-vetor.png";
 import imgQrCode from "../assets/Captura de tela 2025-11-25 102602.png";
@@ -6,10 +6,11 @@ import ButtonsHome from "./buttons-home/ButtonsHome";
 import ButtonEnter from "../components/ButtonEnter";
 import ButtonAgendeWhatsapp from "../components/ButtonAgendeWhatsapp";
 import ButtonAgendeAqui from "../components/ButtonAgendeAqui";
+import FormPage from "./FormPage";
 import "./Home.css";
 
 const Home = () => {
-  //Função Scroll
+  // < Função Scroll da página
   const secaoQuemSomos = useRef(null);
   const secaoMissao = useRef(null);
   const secaoAgende = useRef(null);
@@ -17,8 +18,8 @@ const Home = () => {
   const scrollDestinationQuemSomos = () => {
     if (secaoQuemSomos.current) {
       secaoQuemSomos.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -26,8 +27,8 @@ const Home = () => {
   const scrollDestinationMissao = () => {
     if (secaoMissao.current) {
       secaoMissao.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -35,10 +36,17 @@ const Home = () => {
   const scrollDestinationAgende = () => {
     if (secaoAgende.current) {
       secaoAgende.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+        behavior: "smooth",
+        block: "start",
       });
     }
+  };
+  // </ Função Scroll da página
+
+  const [formPageOn, setformPageOn] = useState(false);
+
+  const openFormPage = () => {
+    setformPageOn((prevFormPage) => !prevFormPage);
   };
 
   return (
@@ -54,10 +62,10 @@ const Home = () => {
         />
 
         {/* Botões Quem Somos e Início */}
-        <ButtonsHome 
-          scrollDestinationQuemSomos = {scrollDestinationQuemSomos}
-          scrollDestinationMissao = {scrollDestinationMissao}
-          scrollDestinationAgende = {scrollDestinationAgende}
+        <ButtonsHome
+          scrollDestinationQuemSomos={scrollDestinationQuemSomos}
+          scrollDestinationMissao={scrollDestinationMissao}
+          scrollDestinationAgende={scrollDestinationAgende}
         />
 
         {/* Botão Enter */}
@@ -72,7 +80,8 @@ const Home = () => {
 
           {/* Botões Agende Aqui e Agende pelo Whatsapp */}
           <div ref={secaoQuemSomos}>
-            <ButtonAgendeAqui />
+            <ButtonAgendeAqui toClick={openFormPage} />
+            {formPageOn && <FormPage setOpenFormPage = {() => setformPageOn(!formPageOn)}/>}
             <ButtonAgendeWhatsapp />
           </div>
         </div>
@@ -81,21 +90,21 @@ const Home = () => {
         {/* </ Parte do Agende Sua Consula */}
 
         {/* Parte do Quem Somos */}
-        
-        <div className="whoWeAre" >
-          <h2 >Quem Somos</h2>
-          <p className="textWhoWeAre" >
+
+        <div className="whoWeAre">
+          <h2>Quem Somos</h2>
+          <p className="textWhoWeAre">
             Seja bem-vindo(a) à nossa clínica de psicologia. Somos um espaço
             dedicado ao cuidado integral da sua saúde mental e bem-estar
             emocional. Entendemos que a jornada da vida é repleta de desafios e
             transformações, e ter um suporte profissional e acolhedor faz toda a
-            diferença. 
+            diferença.
           </p>
 
           <p ref={secaoMissao}></p>
-          
+
           {/* Cards missão, valores e abordagem */}
-          <div className="cards" >
+          <div className="cards">
             {/* Card Missão */}
             <div className="cardsLower">
               <div className="cardsSuperior">
@@ -135,6 +144,7 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Rodapé da Página */}
         <footer>
           <img src={imgInMind} alt="imgFoot" className="imgInMindFoot" />
 

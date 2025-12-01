@@ -1,9 +1,11 @@
 import "./ButtonAgendeAqui.css"
 
-const ButtonAgendeAqui = () => {
+const ButtonAgendeAqui = ({ toClick }) => {
   return (
     <div>
-      <a href="a" className="buttonAgende">Agende Aqui!</a>
+      <p onClick={toClick} className="buttonAgende">
+        Agende Aqui!
+      </p>
     </div>
   )
 }
