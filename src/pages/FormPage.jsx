@@ -1,10 +1,39 @@
 import "./FormPage.css";
 import imgMenuVoltar from "../assets/menu_voltar.png";
 import { IMaskInput } from "react-imask";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AgendaPage from "./AgendaPage";
 
 const FormPage = ({ setOpenFormPage }) => {
+  // < Controle de dados do Form
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [telphone, setTelphone] = useState();
+  const [dateBirth, setDateBirth] = useState();
+
+  const [isButtonOn, setIsButtonOn] = useState(false);
+
+  const validateForm = () => {
+    return name.trim() !== "" && email.trim();
+  };
+
+  useEffect(() => {
+    setIsButtonOn(validateForm());
+  }, [name, email, telphone, dateBirth]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isButtonOn) {
+      alert("${name}, ${email}, ${telphone}, ${dateBirth}");
+    }
+  };
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  // </ Controle de dados do Form
+
+  // Função para o botão Submit abrir outra pag
   const [agendaPageOn, setAgendaPageOn] = useState(false);
 
   const openAgendaPage = () => {
@@ -22,13 +51,14 @@ const FormPage = ({ setOpenFormPage }) => {
 
         <h1 className="titleForm">Preencha o Formulário: </h1>
 
-        <form className="form">
-          <label htmlFor=""> Nome Completo: </label>
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="name"> Nome Completo: </label>
           <input
             type="text"
             placeholder="Digite seu nome completo"
             required
             minLength={4}
+            onChange={handleName}
           />
 
           <label htmlFor=""> Email: </label>
@@ -44,9 +74,16 @@ const FormPage = ({ setOpenFormPage }) => {
           <label htmlFor=""> Data de Nascimento: </label>
           <input type="date" placeholder="00/00/0000" required id="date" />
 
-          <button type="submit" onClick={openAgendaPage}>
+          <button
+            type="submit"
+            onClick={openAgendaPage}
+            value="Continuar"
+            className="buttonSubmit"
+            disabled={!isButtonOn}
+          >
             Continuar
           </button>
+          {!isButtonOn && <p>aaa</p>}
           {agendaPageOn && (
             <AgendaPage
               setOpenAgendaPage={() => setAgendaPageOn(!agendaPageOn)}
