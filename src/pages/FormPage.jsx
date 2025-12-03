@@ -1,8 +1,15 @@
 import "./FormPage.css";
 import imgMenuVoltar from "../assets/menu_voltar.png";
+import { IMaskInput } from "react-imask";
+import React, { useState } from "react";
+import AgendaPage from "./AgendaPage";
 
 const FormPage = ({ setOpenFormPage }) => {
+  const [agendaPageOn, setAgendaPageOn] = useState(false);
 
+  const openAgendaPage = () => {
+    setAgendaPageOn((prevAgendaPage) => !prevAgendaPage);
+  };
 
   return (
     <div className="backPage">
@@ -17,18 +24,34 @@ const FormPage = ({ setOpenFormPage }) => {
 
         <form className="form">
           <label htmlFor=""> Nome Completo: </label>
-          <input type="text" placeholder="Digite seu nome completo" required minLength={4}/>
+          <input
+            type="text"
+            placeholder="Digite seu nome completo"
+            required
+            minLength={4}
+          />
 
           <label htmlFor=""> Email: </label>
           <input type="email" placeholder="Digite seu email" required />
 
           <label htmlFor=""> Telefone para Contato: </label>
-          <input type="text" placeholder="(00) 00000-0000" maxLength="15" required />
+          <IMaskInput
+            mask="(00) 00000-0000"
+            placeholder="(00) 00000-0000"
+            required
+          />
 
           <label htmlFor=""> Data de Nascimento: </label>
-          <input type="date" placeholder="Nome Completo" required />
+          <input type="date" placeholder="00/00/0000" required id="date" />
 
-          <button>Continuar</button>
+          <button type="submit" onClick={openAgendaPage}>
+            Continuar
+          </button>
+          {agendaPageOn && (
+            <AgendaPage
+              setOpenAgendaPage={() => setAgendaPageOn(!agendaPageOn)}
+            />
+          )}
         </form>
       </div>
     </div>

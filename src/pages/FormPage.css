@@ -68,3 +68,8 @@
 .form button:hover {
   background-color: #f0707b;
 }
+
+#date {
+  font-family: Arial;
+  color: rgb(118, 118, 118);
+}
