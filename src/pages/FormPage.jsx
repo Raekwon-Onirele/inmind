@@ -6,30 +6,32 @@ import AgendaPage from "./AgendaPage";
 
 const FormPage = ({ setOpenFormPage }) => {
   // < Controle de dados do Form
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [telphone, setTelphone] = useState();
-  const [dateBirth, setDateBirth] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [telphone, setTelphone] = useState("");
+  const [dateBirth, setDateBirth] = useState("");
 
-  const [isButtonOn, setIsButtonOn] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const validateForm = () => {
-    return name.trim() !== "" && email.trim();
+    return (
+      name.trim() !== "" &&
+      email.trim() !== "" &&
+      telphone.trim() !== "" &&
+      dateBirth.trim() !== ""
+    );
   };
 
   useEffect(() => {
-    setIsButtonOn(validateForm());
+    setIsFormValid(validateForm());
   }, [name, email, telphone, dateBirth]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isButtonOn) {
-      alert("${name}, ${email}, ${telphone}, ${dateBirth}");
+    if (isFormValid) {
+      console.log({ name, email, telphone, dateBirth });
+      openAgendaPage();
     }
-  };
-
-  const handleName = (e) => {
-    setName(e.target.value);
   };
   // </ Controle de dados do Form
 
@@ -55,35 +57,46 @@ const FormPage = ({ setOpenFormPage }) => {
           <label htmlFor="name"> Nome Completo: </label>
           <input
             type="text"
+            value={name}
             placeholder="Digite seu nome completo"
             required
-            minLength={4}
-            onChange={handleName}
+            minLength={10}
+            onChange={(e) => setName(e.target.value)}
           />
 
           <label htmlFor=""> Email: </label>
-          <input type="email" placeholder="Digite seu email" required />
+          <input
+            value={email}
+            type="email"
+            placeholder="Digite seu email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
           <label htmlFor=""> Telefone para Contato: </label>
           <IMaskInput
             mask="(00) 00000-0000"
             placeholder="(00) 00000-0000"
-            required
+            onChange={(e) => setTelphone(e.target.value)}
           />
 
           <label htmlFor=""> Data de Nascimento: </label>
-          <input type="date" placeholder="00/00/0000" required id="date" />
+          <input
+            type="date"
+            placeholder="00/00/0000"
+            required
+            id="date"
+            onChange={(e) => setDateBirth(e.target.value)}
+          />
 
           <button
             type="submit"
-            onClick={openAgendaPage}
             value="Continuar"
             className="buttonSubmit"
-            disabled={!isButtonOn}
+            disabled={!isFormValid}
           >
             Continuar
           </button>
-          {!isButtonOn && <p>aaa</p>}
           {agendaPageOn && (
             <AgendaPage
               setOpenAgendaPage={() => setAgendaPageOn(!agendaPageOn)}
