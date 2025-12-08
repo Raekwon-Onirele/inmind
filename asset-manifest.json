@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/inmind/static/css/main.2692166d.css",
+    "main.js": "/inmind/static/js/main.e7891f9a.js",
+    "static/js/453.0b00dc08.chunk.js": "/inmind/static/js/453.0b00dc08.chunk.js",
+    "static/media/InMind_page-0001.png": "/inmind/static/media/InMind_page-0001.f6e8524d3605cf417730.png",
+    "static/media/2506262-perfil-com-quebra-cabeca-gratis-vetor.png": "/inmind/static/media/2506262-perfil-com-quebra-cabeca-gratis-vetor.e9645d3c01bff79af230.png",
+    "static/media/logo-quemsomos-arrow.png": "/inmind/static/media/logo-quemsomos-arrow.d5acafc31f5a9d43564f.png",
+    "static/media/logo-quemsomos-home.png": "/inmind/static/media/logo-quemsomos-home.df5f74e30169a39d6b88.png",
+    "static/media/menu_voltar.png": "/inmind/static/media/menu_voltar.5f5d67fc21d58eef1b98.png",
+    "static/media/logo-inicio-hamburguer.png": "/inmind/static/media/logo-inicio-hamburguer.a746f0f2c5d3539eb851.png",
+    "static/media/logo-inicio-seta.png": "/inmind/static/media/logo-inicio-seta.6676e122db45e8d371dc.png",
+    "static/media/Captura de tela 2025-11-25 102602.png": "/inmind/static/media/Captura de tela 2025-11-25 102602.ef7d1cd12f4b0796aa7c.png",
+    "index.html": "/inmind/index.html",
+    "main.2692166d.css.map": "/inmind/static/css/main.2692166d.css.map",
+    "main.e7891f9a.js.map": "/inmind/static/js/main.e7891f9a.js.map",
+    "453.0b00dc08.chunk.js.map": "/inmind/static/js/453.0b00dc08.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2692166d.css",
+    "static/js/main.e7891f9a.js"
+  ]
+}
