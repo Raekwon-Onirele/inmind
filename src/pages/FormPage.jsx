@@ -59,7 +59,7 @@ const FormPage = ({ setOpenFormPage }) => {
             type="text"
             value={name}
             placeholder="Digite seu nome completo"
-            required
+            
             minLength={10}
             onChange={(e) => setName(e.target.value)}
           />
@@ -69,7 +69,7 @@ const FormPage = ({ setOpenFormPage }) => {
             value={email}
             type="email"
             placeholder="Digite seu email"
-            required
+            
             onChange={(e) => setEmail(e.target.value)}
           />
 
@@ -84,7 +84,7 @@ const FormPage = ({ setOpenFormPage }) => {
           <input
             type="date"
             placeholder="00/00/0000"
-            required
+            
             id="date"
             onChange={(e) => setDateBirth(e.target.value)}
           />
@@ -99,6 +99,7 @@ const FormPage = ({ setOpenFormPage }) => {
           </button>
           {agendaPageOn && (
             <AgendaPage
+              setOpenFormPage={setOpenFormPage}
               setOpenAgendaPage={() => setAgendaPageOn(!agendaPageOn)}
             />
           )}

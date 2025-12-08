@@ -20,6 +20,12 @@
 }
 
 .agendaGoogle {
-    width: 60vw;
-    background-color: white;
+  margin: 50px 0px 0px -70px;
+  width: 60vw;
+  height: 60vh;
+  background-color: white;
+}
+
+.buttonContinue {
+  margin: auto -40px auto 20px;
 }

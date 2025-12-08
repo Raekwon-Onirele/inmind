@@ -9,7 +9,7 @@ import ButtonAgendeAqui from "../components/ButtonAgendeAqui";
 import FormPage from "./FormPage";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({ setOpenHomePage }) => {
   // < Função Scroll da página
   const secaoQuemSomos = useRef(null);
   const secaoMissao = useRef(null);
@@ -42,7 +42,6 @@ const Home = () => {
     }
   };
   // </ Função Scroll da página
-
 
   //Função para Abrir a FormPage
   const [formPageOn, setformPageOn] = useState(false);
@@ -83,7 +82,9 @@ const Home = () => {
           {/* Botões Agende Aqui e Agende pelo Whatsapp */}
           <div ref={secaoQuemSomos}>
             <ButtonAgendeAqui toClick={openFormPage} />
-            {formPageOn && <FormPage setOpenFormPage = {() => setformPageOn(!formPageOn)}/>}
+            {formPageOn && (
+              <FormPage setOpenFormPage={() => setformPageOn(!formPageOn)} />
+            )}
             <ButtonAgendeWhatsapp />
           </div>
         </div>

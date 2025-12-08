@@ -52,7 +52,7 @@
   border: none;
 }
 
-.form button {
+.form .buttonSubmit {
   margin: 20px auto;
   font-size: 17px;
   font-weight: bold;
@@ -65,7 +65,7 @@
   cursor: pointer;
 }
 
-.form button:hover {
+.form .buttonSubmit:hover {
   background-color: #f0707b;
 }
 

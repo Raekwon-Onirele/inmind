@@ -1,0 +1,12 @@
+.buttonContinue {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 13px;
+  width: 180px;
+  height: 60px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #ef5361;
+  color: white;
+  cursor: pointer;
+}
