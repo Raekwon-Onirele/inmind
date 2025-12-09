@@ -1,4 +1,5 @@
-﻿#  raekwon-onirele.github.io/InMind
+﻿#  raekwon-onirele.github.io/inmind/
+
 
 
 
