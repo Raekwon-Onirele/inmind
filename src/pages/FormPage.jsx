@@ -1,37 +1,21 @@
 import "./FormPage.css";
 import imgMenuVoltar from "../assets/menu_voltar.png";
 import { IMaskInput } from "react-imask";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import AgendaPage from "./AgendaPage";
 
 const FormPage = ({ setOpenFormPage }) => {
   // < Controle de dados do Form
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [telphone, setTelphone] = useState("");
-  const [dateBirth, setDateBirth] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [isFormValid, setIsFormValid] = useState(false);
-
-  const validateForm = () => {
-    return (
-      name.trim() !== "" &&
-      email.trim() !== "" &&
-      telphone.trim() !== "" &&
-      dateBirth.trim() !== ""
-    );
-  };
-
-  useEffect(() => {
-    setIsFormValid(validateForm());
-  }, [name, email, telphone, dateBirth]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isFormValid) {
-      console.log({ name, email, telphone, dateBirth });
-      openAgendaPage();
-    }
+  const onSubmit = (data) => {
+    console.log(data);
+    openAgendaPage();
   };
   // </ Controle de dados do Form
 
@@ -53,50 +37,66 @@ const FormPage = ({ setOpenFormPage }) => {
 
         <h1 className="titleForm">Preencha o Formulário: </h1>
 
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)} >
           <label htmlFor="name"> Nome Completo: </label>
           <input
             type="text"
-            value={name}
+            {...register("name", { required: true, minLength: 10 })}
             placeholder="Digite seu nome completo"
-            
-            minLength={10}
-            onChange={(e) => setName(e.target.value)}
+            style={{
+              border: `2px solid ${errors.name ? "red" : "none"}`,
+            }}
           />
+          {errors.name && (
+            <span className="msgErrorForm">Este campo é obrigatório</span>
+          )}
 
           <label htmlFor=""> Email: </label>
           <input
-            value={email}
-            type="email"
+            {...register("email", {
+              required: true,
+              pattern: {
+                value: /@/,
+                message: "mensagem ",
+              },
+            })}
             placeholder="Digite seu email"
-            
-            onChange={(e) => setEmail(e.target.value)}
+            style={{
+              border: `2px solid ${errors.email ? "red" : "none"}`,
+            }}
           />
+          {errors.email && (
+            <span className="msgErrorForm">Este campo o @ é obrigatório</span>
+          )}
 
           <label htmlFor=""> Telefone para Contato: </label>
           <IMaskInput
             mask="(00) 00000-0000"
             placeholder="(00) 00000-0000"
-            onChange={(e) => setTelphone(e.target.value)}
+            {...register("telphone")}
+            
           />
 
           <label htmlFor=""> Data de Nascimento: </label>
           <input
             type="date"
-            placeholder="00/00/0000"
-            
             id="date"
-            onChange={(e) => setDateBirth(e.target.value)}
+            placeholder="00/00/0000"
+            {...register("date", {
+              required: true,
+            })}
+            style={{
+              border: `2px solid ${errors.date ? "red" : "none"}`,
+            }}
           />
+          {errors.date && (
+            <span className="msgErrorForm">Este campo é obrigatório</span>
+          )}
 
-          <button
-            type="submit"
-            value="Continuar"
-            className="buttonSubmit"
-            disabled={!isFormValid}
-          >
+          <button type="submit" value="Continuar" className="buttonSubmit">
             Continuar
           </button>
+
           {agendaPageOn && (
             <AgendaPage
               setOpenFormPage={setOpenFormPage}

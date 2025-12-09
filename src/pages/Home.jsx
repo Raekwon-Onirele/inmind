@@ -8,8 +8,9 @@ import ButtonAgendeWhatsapp from "../components/ButtonAgendeWhatsapp";
 import ButtonAgendeAqui from "../components/ButtonAgendeAqui";
 import FormPage from "./FormPage";
 import "./Home.css";
+import ReportPage from "./ReportPage";
 
-const Home = ({ setOpenHomePage }) => {
+const Home = () => {
   // < Função Scroll da página
   const secaoQuemSomos = useRef(null);
   const secaoMissao = useRef(null);
@@ -50,6 +51,12 @@ const Home = ({ setOpenHomePage }) => {
     setformPageOn((prevFormPage) => !prevFormPage);
   };
 
+  const [reportPage, setReportPage] = useState(false);
+
+  const openReportPage = () => {
+    setReportPage((prevReportPage) => !prevReportPage);
+  }
+
   return (
     <div>
       {/* < Nav-Bar da página */}
@@ -70,7 +77,10 @@ const Home = ({ setOpenHomePage }) => {
         />
 
         {/* Botão Enter */}
-        <ButtonEnter className="buttonEnter" />
+        <ButtonEnter className="buttonEnter" toClick={openReportPage}/>
+        {reportPage && (
+          <ReportPage setOpenReportPage={() => setReportPage(!reportPage)}/>
+        )}
       </nav>
       {/* </ Nav-Bar da página */}
 

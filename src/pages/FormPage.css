@@ -48,8 +48,13 @@
   height: 40px;
   font-size: 15px;
   outline: none;
-  border-bottom: 8px black;
   border: none;
+}
+
+.msgErrorForm {
+  font-size: 10px;
+  color:red;
+  margin-bottom: -5px;
 }
 
 .form .buttonSubmit {

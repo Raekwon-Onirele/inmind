@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+
 import "./AgendaPage.css";
 import imgMenuVoltar from "../assets/menu_voltar.png";
 import ButtonContinue from "../components/ButtonContinue";
-import Home from "./Home.jsx";
+
 
 const AgendaPage = ({ setOpenAgendaPage, setOpenFormPage }) => {
   return (

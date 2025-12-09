@@ -1,12 +1,10 @@
 import "./ButtonEnter.css";
 
-const ButtonEnter = () => {
+const ButtonEnter = ( {toClick} ) => {
   return (
     <div>
-      <p className="buttonEnter">
-        <a href="a" className="textEnter">
+      <p className="buttonEnter" onClick={toClick}>
           Entrar
-        </a>
       </p>
     </div>
   )

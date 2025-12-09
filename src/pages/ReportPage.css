@@ -1,0 +1,27 @@
+.backPage {
+  background-color: rgb(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.reportPage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #6ab0ec;
+  padding: 40px;
+  height: 70vh;
+  width: 80vw;
+}
+
+.reportPage img {
+  width: 170px;
+  height: 100px;
+  margin: -30px 0px 0px -30px;
+  cursor: pointer;
+}
