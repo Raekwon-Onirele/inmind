@@ -69,12 +69,12 @@ const Home = () => {
           href="a"
         />
 
-        {/* Botões Quem Somos e Início 
+        {/* Botões Quem Somos e Início */}
         <ButtonsHome
           scrollDestinationQuemSomos={scrollDestinationQuemSomos}
           scrollDestinationMissao={scrollDestinationMissao}
           scrollDestinationAgende={scrollDestinationAgende}
-        />*/ }
+        />
 
         {/* Botão Enter */}
         <ButtonEnter className="buttonEnter" toClick={openReportPage}/>
