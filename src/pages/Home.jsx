@@ -54,7 +54,7 @@ const Home = () => {
   const [reportPage, setReportPage] = useState(false);
 
   const openReportPage = () => {
-    setReportPage((prevReportPage) => !prevReportPage);
+    setReportPage((prevReportPage) => !prevReportPage);aa
   }
 
   return (
