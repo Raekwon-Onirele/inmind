@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/inmind/static/css/main.2692166d.css",
-    "main.js": "/inmind/static/js/main.e7891f9a.js",
+    "main.css": "/inmind/static/css/main.90044fdb.css",
+    "main.js": "/inmind/static/js/main.c49d2611.js",
     "static/js/453.0b00dc08.chunk.js": "/inmind/static/js/453.0b00dc08.chunk.js",
     "static/media/InMind_page-0001.png": "/inmind/static/media/InMind_page-0001.f6e8524d3605cf417730.png",
     "static/media/2506262-perfil-com-quebra-cabeca-gratis-vetor.png": "/inmind/static/media/2506262-perfil-com-quebra-cabeca-gratis-vetor.e9645d3c01bff79af230.png",
@@ -12,12 +12,12 @@
     "static/media/logo-inicio-seta.png": "/inmind/static/media/logo-inicio-seta.6676e122db45e8d371dc.png",
     "static/media/Captura de tela 2025-11-25 102602.png": "/inmind/static/media/Captura de tela 2025-11-25 102602.ef7d1cd12f4b0796aa7c.png",
     "index.html": "/inmind/index.html",
-    "main.2692166d.css.map": "/inmind/static/css/main.2692166d.css.map",
-    "main.e7891f9a.js.map": "/inmind/static/js/main.e7891f9a.js.map",
+    "main.90044fdb.css.map": "/inmind/static/css/main.90044fdb.css.map",
+    "main.c49d2611.js.map": "/inmind/static/js/main.c49d2611.js.map",
     "453.0b00dc08.chunk.js.map": "/inmind/static/js/453.0b00dc08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2692166d.css",
-    "static/js/main.e7891f9a.js"
+    "static/css/main.90044fdb.css",
+    "static/js/main.c49d2611.js"
   ]
 }
